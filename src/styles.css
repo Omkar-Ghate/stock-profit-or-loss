@@ -71,6 +71,18 @@ input {
   border-radius: 0.3rem;
 }
 
-.btn {
-  margin-bottom: 1rem;
+.submitBtn {
+  background-color: rgb(255, 255, 255, 0.7);
+  border: 2px solid transparent;
+  border-radius: 0.3rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  transition: 0.3s;
+}
+
+.submitBtn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: rgb(255, 255, 255, 0.85);
 }

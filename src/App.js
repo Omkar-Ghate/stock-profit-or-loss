@@ -69,7 +69,7 @@ export default function App() {
               required
             />
 
-            <button type="submit" className="btn">
+            <button type="submit" className="submitBtn">
               Check
             </button>
           </form>
