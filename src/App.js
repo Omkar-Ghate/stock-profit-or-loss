@@ -16,12 +16,25 @@ export default function App() {
 
   function handleClick(event) {
     event.preventDefault();
-    var ans = (Number(currentPrice) - Number(initialPrice)) * Number(quantity);
-
-    if (ans < 0)
-      setMessage("Ooops! You have made a loss of " + Math.abs(ans) + " rupees");
-    else if (ans > 0)
-      setMessage("Wow! You have made a profit of " + ans + " rupees");
+    var result =
+      (Number(currentPrice) - Number(initialPrice)) * Number(quantity);
+    var resultPercentage = (result / Number(initialPrice)) * 100;
+    if (result < 0)
+      setMessage(
+        "Ooops! You have made a loss of " +
+          Math.abs(result) +
+          " rupees at " +
+          resultPercentage +
+          "%"
+      );
+    else if (result > 0)
+      setMessage(
+        "Wow! You have made a profit of " +
+          result +
+          " rupees at " +
+          resultPercentage +
+          "%"
+      );
     else setMessage("No profit, no loss. Cheers!");
   }
 
