@@ -5,7 +5,6 @@ export default function App() {
   var [initialPrice, setInitialPrice] = useState("");
   var [quantity, setQuantity] = useState("");
   var [currentPrice, setCurrentPrice] = useState("");
-  var [result, setResult] = useState(0);
   var [message, setMessage] = useState("Your result will appear here");
 
   function handleChange(event) {
@@ -17,16 +16,12 @@ export default function App() {
 
   function handleClick(event) {
     event.preventDefault();
-    setResult(
-      Number((Number(currentPrice) - Number(initialPrice)) * Number(quantity))
-    );
+    var ans = (Number(currentPrice) - Number(initialPrice)) * Number(quantity);
 
-    if (result < 0)
-      setMessage(
-        "Ooops! You have made a loss of " + Math.abs(result) + " rupees"
-      );
-    else if (result > 0)
-      setMessage("Wow! You have made a profit of " + result + " rupees");
+    if (ans < 0)
+      setMessage("Ooops! You have made a loss of " + Math.abs(ans) + " rupees");
+    else if (ans > 0)
+      setMessage("Wow! You have made a profit of " + ans + " rupees");
     else setMessage("No profit, no loss. Cheers!");
   }
 
