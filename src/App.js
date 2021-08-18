@@ -50,6 +50,7 @@ export default function App() {
     } else if (result > 0) {
       setMessage(
         "Wow! You have made a profit of ₹" +
+          Math.abs(result) +
           " at " +
           Math.abs(resultPercentage) +
           "%"
