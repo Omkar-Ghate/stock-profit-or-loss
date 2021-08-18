@@ -115,7 +115,7 @@ export default function App() {
           </form>
 
           <div className="emojiWrapper" style={{ display: `${imgDisplay}` }}>
-            <img src={emojiToShow} alt="image" />
+            <img src={emojiToShow} alt="" />
           </div>
         </div>
 
@@ -127,22 +127,22 @@ export default function App() {
           <ul>
             <li className="footerLink">
               <a href="https://github.com/Omkar-Ghate" target="blank">
-                <img className="socialIcon" src={github}></img>
+                <img className="socialIcon" src={github} alt=""></img>
               </a>
             </li>
             <li className="footerLink">
               <a href="https://twitter.com/OmkarGhate9" target="blank">
-                <img className="socialIcon" src={twitter}></img>
+                <img className="socialIcon" src={twitter} alt=""></img>
               </a>
             </li>
             <li className="footerLink">
               <a href="https://www.linkedin.com/in/omkarghate/" target="blank">
-                <img className="socialIcon" src={linkedIn}></img>
+                <img className="socialIcon" src={linkedIn} alt=""></img>
               </a>
             </li>
             <li className="footerLink">
               <a href="https://omkarghate.netlify.app/" target="blank">
-                <img className="socialIcon" src={briefcase}></img>
+                <img className="socialIcon" src={briefcase} alt=""></img>
               </a>
             </li>
           </ul>
