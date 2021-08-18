@@ -35,12 +35,12 @@ export default function App() {
         "Ooops! You have made a loss of ₹" +
           Math.abs(result) +
           " at " +
-          resultPercentage +
+          Math.abs(resultPercentage) +
           "%"
       );
       setEmojiToShow(loss); // display the loss emoji
 
-      if (Number(resultPercentage) <= -50) {
+      if (Number(Math.abs(resultPercentage)) >= 50) {
         // if loss is more than 50%, set bg color red
         setBgColor("rgb(255,0,0,0.4");
       } else {
@@ -49,7 +49,10 @@ export default function App() {
       }
     } else if (result > 0) {
       setMessage(
-        "Wow! You have made a profit of ₹" + " at " + resultPercentage + "%"
+        "Wow! You have made a profit of ₹" +
+          " at " +
+          Math.abs(resultPercentage) +
+          "%"
       );
       setEmojiToShow(profit);
       if (Number(resultPercentage) >= 50) {
