@@ -28,7 +28,8 @@ export default function App() {
     event.preventDefault();
     result = (Number(currentPrice) - Number(initialPrice)) * Number(quantity);
     result = Math.round(result * 1000) / 1000; //Rounding off
-    var resultPercentage = (result / Number(initialPrice)) * 100;
+    var resultPercentage =
+      (result / (Number(initialPrice) * Number(quantity))) * 100;
     resultPercentage = Math.round(resultPercentage * 1000) / 1000; //Rounding off
     if (result < 0) {
       setMessage(
